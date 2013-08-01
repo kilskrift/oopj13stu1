@@ -3,7 +3,10 @@ Av Kristian Grossman-Madsen.
 
 Jag började med att sätta upp ett projekt i mitt IDE, IntelliJ IDEA. Sedan importerade jag den givna källkoden,
 BallWorld.java, till projektet. Nästa steg blev att skapa ett gitrepo & klona det till github, varefter jag checkade in
-filen, ren readme-fil med uppgiftstexten, samt denna rapport. Projektet finns att hämta på TODO ///länk till github///.
+filen, ren readme-fil med uppgiftstexten, samt denna rapport.
+
+Uppgiften finns i sin helhet tillgängligt på github, se https://github.com/kilskrift/oopj13stu1, särskilt då historiken
+ på https://github.com/kilskrift/oopj13stu1/commits/master.
 
 Deluppgift 1 - Fikapaus
 
@@ -69,6 +72,19 @@ Jag gjorde helt enkelt så att jag skapade en till boll -- ball2 -- i BallPanel 
 ball, så att den fick annan riktning & utseende än den ursprungliga bollen. Det hade förstås varit snyggare att skapa en
 lista av bollar & iterera över den vid varje referens till ball i ursprungskoden, men för uppgiften räcker det med ett
 "fulhack", jag ber om överseende med detta.
+
+Deluppgift 6 - Pulsarer
+
+"Låt bollarna få pulserande storlek. För detta behöver du en boolesk tillståndsvariabel i klassen Ball som anger om
+bollen för tillfället krymper eller växer. Vidare behöver du tröskelvillkor som byter tillstånd på variabeln då bollen
+når sin minimistorlek och när den når sin maximistorlek (väljs med förstånd). Modifiera sedan metoden action() så att
+bollen får den pulserande egenskapen. Beskriv vilka ändringar du gjort."
+
+Jag börjar med att lägga till ett attribut Ball.growing, som sedan initeras i konstruktorn för Ball. I metoden action()
+kontrolleras om bollen är växande eller inte, och ett nytt värde på bollens diameter sätts därefter, samt growing sätts
+om beroende på om ett största respektive lägsta värde passerats.
+
+
 
 
 

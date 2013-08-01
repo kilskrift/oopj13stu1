@@ -22,6 +22,9 @@ class Ball {
     static int        defaultDiameter  = 10;
     static Color      defaultColor     = Color.yellow;
     static Rectangle  defaultBox       = new Rectangle(0,0,100,100);
+    static Boolean    defaultGrowing   = true;
+
+    private Boolean   growing;  // deluppgift 6
 
     // Position 
     private int x, y;
@@ -47,6 +50,7 @@ class Ball {
 
         color = defaultColor;
         diameter = defaultDiameter;
+        growing = defaultGrowing;
     }
 
     public void setDiameter( int newDiameter ) {
@@ -99,6 +103,15 @@ class Ball {
         x = x + dx;
         y = y + dy;
 
+        // deluppgift 6
+        if( this.growing ) {
+            this.setDiameter( this.diameter + 5 );
+            this.growing = (this.diameter > 25) ? false : true;
+        }
+        else {
+            this.setDiameter( this.diameter - 4 );
+            this.growing = (this.diameter < 5 ) ? true : false;
+        }
         constrain();
     }
 }
