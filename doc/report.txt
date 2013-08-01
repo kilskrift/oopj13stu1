@@ -60,4 +60,15 @@ storlek (diameter). Lägg till en sådan metod och använd den sedan för att ä
 Jag lade till en setter för attributet diameter i klassen Ball & anropar sedan den på samma plats där jag tidigare satt
 bollens färg.
 
+Deluppgift 5 - Dubbelt så många
+
+"Lägg in en extra boll med annan färg, storlek och hastighet så att det finns totalt två bollar som studsar. Beskriv
+vilka ändringar du gjort."
+
+Jag gjorde helt enkelt så att jag skapade en till boll -- ball2 -- i BallPanel & initierade den med lite andra värden än
+ball, så att den fick annan riktning & utseende än den ursprungliga bollen. Det hade förstås varit snyggare att skapa en
+lista av bollar & iterera över den vid varje referens till ball i ursprungskoden, men för uppgiften räcker det med ett
+"fulhack", jag ber om överseende med detta.
+
+
 

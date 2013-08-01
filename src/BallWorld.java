@@ -114,6 +114,7 @@ class BallPanel extends JPanel implements ActionListener {
 
     // En boll 
     private Ball ball;
+    private Ball ball2;
 
     // Timer. Skickar en signal var 50e millisekund till panelen som
     // skickas med som ActionListener.
@@ -128,13 +129,20 @@ class BallPanel extends JPanel implements ActionListener {
 
         // Skapa en ny boll
         ball = new Ball( width / 10, height / 5, 5, 5 );
+        ball2 = new Ball( width / 20, height / 2, 9, 9 );
 
         ball.setColor( Color.blue ); // deluppgift 2
         ball.setDiameter( 20 ); // deluppgift 4
 
         // S�tt bollens rektangul�ra begr�nsande omr�de (bounding box)
         ball.setBoundingBox( new Rectangle( 0, 0, width, height ) );
-        
+
+        ball2.setColor( Color.green );
+        ball2.setDiameter( 5 );
+
+        // S�tt bollens rektangul�ra begr�nsande omr�de (bounding box)
+        ball2.setBoundingBox( new Rectangle( 20, 20, width-20, height-20 ) );
+
         // Starta timern.
         timer.start();
     }
@@ -148,6 +156,7 @@ class BallPanel extends JPanel implements ActionListener {
 
         // Rita ut bollen (p� svart bakgrund)
         ball.paint( g );
+        ball2.paint( g );
     }
 
     // N�r vi f�r en signal fr�n timern... 
@@ -155,6 +164,7 @@ class BallPanel extends JPanel implements ActionListener {
         if(width != getWidth() || height != getHeight())
             wasResized(getWidth(),getHeight());
         ball.action();  // G�r vad som �r relevant med bollen
+        ball2.action();
         repaint();      // G�r automatiskt ett anrop till
                         // paintComponent()
     }
@@ -165,6 +175,7 @@ class BallPanel extends JPanel implements ActionListener {
         height = newHeight;
 
         ball.setBoundingBox( new Rectangle( 0, 0, width, height ) );
+        ball2.setBoundingBox( new Rectangle( 0, 0, width, height ) );
     }
 }
 
