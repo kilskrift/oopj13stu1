@@ -158,6 +158,8 @@ class BallPanel extends JPanel implements ActionListener {
     public void wasResized( int newWidth, int newHeight ) {
         width = newWidth;
         height = newHeight;
+
+        ball.setBoundingBox( new Rectangle( 0, 0, width, height ) );
     }
 }
 

@@ -38,6 +38,15 @@ tar ett argument av typen Color, & på rad 23 sätts ett förval till Color.yell
 Jag letade sedan upp var i BallWorld (eg. i BallPanel, visade det sig) som bollen instantieras & lade till ett anrop
 till setColor på instansen med Color.blue som argument. Vid provkörning såg allt ut som förväntat.
 
+Deluppgift 3 - Fängslande
 
+Uppgiften löd "En s.k. "bounding box" är en rektangel som anger gränserna som bollen studsar inom. Om du ändrar
+storleken på fönstret upptäcker du att området inom vilket bollen studsar är oförändrat. Metoden wasResized() anropas
+då fönsterstorleken ändras. Modifiera wasResized() så att "bounding boxen" ändras till fönstrets rätta storlek. Leta i
+koden för att hitta en metod du kan använda och för att få en uppfattning om hur den ska användas. Beskriv vilka
+ändringar du gjort."
 
-
+I BallPanel kontrolleras vid varje "tick" om fönstret ändrat storlek via eventlyssnaren actionPerformed(). Om det har
+det anropas wasResized(). Själva området en boll studsar inom är en egenskap hos bollen, och ändras med metoden
+setBoundingBox(). Jag lade till ett anrop till ball.setBoundingBox i wasResized(), & nu fungerar det att ändra storlek
+på fönstret, bollen studsar över hela ytan.
