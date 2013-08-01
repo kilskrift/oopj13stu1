@@ -50,3 +50,14 @@ I BallPanel kontrolleras vid varje "tick" om fönstret ändrat storlek via event
 det anropas wasResized(). Själva området en boll studsar inom är en egenskap hos bollen, och ändras med metoden
 setBoundingBox(). Jag lade till ett anrop till ball.setBoundingBox i wasResized(), & nu fungerar det att ändra storlek
 på fönstret, bollen studsar över hela ytan.
+
+Deluppgift 4 - Storlek
+
+"I klassen Ball finns metoder för att ändra färg och "bounding box", men det finns ingen metod för att ändra bollens
+storlek (diameter). Lägg till en sådan metod och använd den sedan för att ändra storleken på bollen. Beskriv vilka
+ändringar du gjort."
+
+Jag lade till en setter för attributet diameter i klassen Ball & anropar sedan den på samma plats där jag tidigare satt
+bollens färg.
+
+

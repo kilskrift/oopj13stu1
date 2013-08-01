@@ -49,6 +49,10 @@ class Ball {
         diameter = defaultDiameter;
     }
 
+    public void setDiameter( int newDiameter ) {
+        this.diameter = newDiameter;
+    }
+
     // S�tt ny f�rg 
     public void setColor( Color c ) {
         color = c;
@@ -126,6 +130,7 @@ class BallPanel extends JPanel implements ActionListener {
         ball = new Ball( width / 10, height / 5, 5, 5 );
 
         ball.setColor( Color.blue ); // deluppgift 2
+        ball.setDiameter( 20 ); // deluppgift 4
 
         // S�tt bollens rektangul�ra begr�nsande omr�de (bounding box)
         ball.setBoundingBox( new Rectangle( 0, 0, width, height ) );
