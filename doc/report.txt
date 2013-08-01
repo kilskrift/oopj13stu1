@@ -1,0 +1,26 @@
+Rapport, inlämningsuppgift 1, objektorienterad programmering med java sommaren 2013.
+Av Kristian Grossman-Madsen.
+
+Jag började med att sätta upp ett projekt i mitt IDE, IntelliJ IDEA. Sedan importerade jag den givna källkoden,
+BallWorld.java, till projektet. Nästa steg blev att skapa ett gitrepo & klona det till github, varefter jag checkade in
+filen, ren readme-fil med uppgiftstexten, samt denna rapport. Projektet finns att hämta på TODO ///länk till github///.
+
+Deluppgift 1 - Fikapaus
+
+Uppgiften var att "Kompilera programmet med kommandot javac BallWorld.java och provkör det med kommandot java BallWorld.
+Beskriv med några få ord vad som händer."
+
+Jag körde först programmet från mitt IDE, det öppnar ett fyrkantigt fönster "AppMain" i övre vänstra hörnet på skärmen,
+ fönstret har svart bakgrund & innehåller en "studsande" gul cirkel som rör sig i en sned rektangel likt en boll som
+ studsar i en låda. Programmet visade detta tills jag stängde ner det efter en stund.
+
+Därefter letade jag upp de kompilerade klassfilerna som mitt IDE lagt under en mapp out/production/oopj13stu1 (namnet på
+mitt projekt). Det fanns tre klass-filer: Ball.class, BallPanel.class & BallWorld.class. Jag ställde mig i mappen &
+körde kommandot "$ java BallWorld". Resultatet blev detsamma som när jag körde programmet från mitt IDE.
+
+För att avsluta min undersökning gick jag till källkoden i mappen src/ i mitt projekt. När jag först försökte kompilera
+filen med "$ javac BallWorld.java" fick jag ett gäng felmeddelanden eftersom det låg en hel del svenska tecken i koden.
+
+Efter att ha läst på med "$ man javac" satte jag flaggan " -encoding ISO8859-1" & då gick det bättre att kompilera. Nu
+kunde jag köra den manuellt kompilerade BallWorld.class & fick återigen samma resultat som från inne i mitt IDE.
+
